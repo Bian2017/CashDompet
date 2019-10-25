@@ -2,6 +2,8 @@
 
 涉及技术栈: Vue、Vuex、Vue Router、axios、mint-ui
 
+[蓝湖地址](https://lanhuapp.com/web/#/item/project/board?pid=8fc30d97-a4b0-4f68-a553-b474b2847f2b)
+
 ### 一、安装依赖
 
 ```
