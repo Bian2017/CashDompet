@@ -1,29 +1,19 @@
-# cash-domept
+## cash-domept
 
-## Project setup
+### 一、安装依赖
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 二、测试环境
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 三、打包编译
+
 ```
 npm run build
 ```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
