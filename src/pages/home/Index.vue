@@ -104,30 +104,35 @@ export default {
 
     .card-content {
       padding: 18.5px 0;
-      display: flex;
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
 
       .card-money {
         color: #0e8601;
         font-size: 18px;
         font-weight: bold;
         line-height: 21px;
+        display: inline-block;
+        width: 160px;
       }
 
       .card-vertical {
         display: inline-block;
         background: #eee;
-        width: 0.5px;
+        width: 1px;
         height: 36px;
       }
 
       .card-interest {
+        display: inline-block;
         color: #333;
-        text-align: right;
+        text-align: center;
         font-size: 14px;
-        line-height: 12px;
+        line-height: 16px;
+        width: 160px;
       }
     }
 
