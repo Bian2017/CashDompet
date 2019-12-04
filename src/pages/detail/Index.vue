@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="detail">
     <div class="detail-card">
       <div class="detail-card-image">
         <img class="card-image" :src="productInfo.icon" />
@@ -62,41 +62,43 @@
           <div class="item-content">{{productInfo.otherDoc}}</div>
         </div>
       </div>
+    </div>
 
-      <div class="download-link">
-        <a :href="productInfo.registLink">DOWNLOAD APLIKASI</a>
-      </div>
+    <div class="download-link">
+      <a :href="productInfo.registLink">DOWNLOAD APLIKASI</a>
     </div>
   </div>
 </template>
 
 <script>
-import { fetchLoanDetailAsync } from '@/services/list'
+import { fetchLoanDetailAsync } from "@/services/list";
 
 export default {
-  data () {
+  data() {
     return {
-      productId: '',
+      productId: "",
       productInfo: {}
-    }
+    };
   },
-  created () {
-    this.productId = this.$route.query.id
-    this.getLoanDetail(this.productId)
+  created() {
+    this.productId = this.$route.query.id;
+    this.getLoanDetail(this.productId);
   },
   methods: {
-    getLoanDetail (id) {
-      this.$indicator.open()
+    getLoanDetail(id) {
+      this.$indicator.open();
 
-      fetchLoanDetailAsync(id).then(res => {
-        this.productInfo = res
-        this.$indicator.close();
-      }).catch(() => {
-        this.$indicator.close();
-      })
+      fetchLoanDetailAsync(id)
+        .then(res => {
+          this.productInfo = res;
+          this.$indicator.close();
+        })
+        .catch(() => {
+          this.$indicator.close();
+        });
     }
   }
-}
+};
 </script>
 
 <style lang="less" scoped>
@@ -151,8 +153,8 @@ export default {
 
 .detail-info {
   background: #fff;
-  margin: 15px 0 100px 0;
-  padding: 17.5px 25px 50px 25px;
+  margin: 15px 0 0 0;
+  padding: 17.5px 25px 100px 25px;
 
   .detail-info-list {
     margin-bottom: 62px;
@@ -175,8 +177,18 @@ export default {
       }
     }
   }
+}
+
+.detail {
+  position: relative;
 
   .download-link {
+    position: fixed;
+    width: 80%;
+    left: 50%;
+    right: 0;
+    transform: translateX(-50%);
+    bottom: 20px;
     background: #073975;
     padding: 18px 0;
     border-radius: 30px;
