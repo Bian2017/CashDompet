@@ -64,9 +64,9 @@
       </div>
     </div>
 
-    <div class="download-link">
-      <a :href="productInfo.registLink">DOWNLOAD APLIKASI</a>
-    </div>
+    <a :href="productInfo.registLink" class="download-link">
+      <span>DOWNLOAD APLIKASI</span>
+    </a>
   </div>
 </template>
 
@@ -194,13 +194,11 @@ export default {
     border-radius: 30px;
     text-align: center;
 
-    > a {
-      cursor: pointer;
-      color: #fff;
-      font-size: 16px;
-      line-height: 18px;
-      text-decoration: none;
-    }
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration: none;
   }
 }
 </style>
